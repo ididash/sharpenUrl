@@ -1,0 +1,23 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>Оригинальная<br /> ссылка:</th>
+            <th>Дата создания:</th>
+            <th>Сжатая ссылка:</th>
+            <th>Кол-во переходов:</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-if="!vm.archives || vm.archives.length == 0">
+            <td colspan="5">Архив по сжатым ссылкам отсутствует</td>
+        </tr>
+        <tr ng-repeat="archive in vm.archives">
+            <th scope="row">{{$index+1}}</th>
+            <td>{{archive.OriginUrl}}</td>
+            <td>{{vm.convertDateTime(archive.CreateOn)}}</td>
+            <td><a href="#" ng-href="{{archive.CompactUrl}}" target="_blank">{{archive.CompactUrl}}</a></td>
+            <td>{{archive.NumberOfViews}}</td>
+        </tr>
+    </tbody>
+</table>

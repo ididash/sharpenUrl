@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <title>Сервис сжатия ссылок</title>
+    <meta charset="utf-8" />
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet">
+    <link href="../../src/css/main.css" rel="stylesheet">
+    <script src="../../scripts/angular/angular.min.js"></script>
+    <script src="../../scripts/angular/angular-aria.min.js"></script>
+    <script src="../../scripts/angular/angular-ui-router.min.js"></script>
+    <script src="../../scripts/angular/angular-messages.min.js"></script>
+</head>
+<body>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container" ng-app="shortener-app">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">URL Shortener</h3>
+                        <nav class="nav nav-masthead">
+                            <a class="nav-link" ui-sref-active="active" href="#" ui-sref="/">Главная</a>
+                            <a class="nav-link" ui-sref-active="active" href="#" ui-sref="archive">Архив</a>
+                        </nav>
+                    </div>
+                </div>
+
+
+                <div class="inner cover">
+                    <div ui-view="root"></div>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>Тестовое задание. И. Рубченко</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../scripts/moment/moment.min.js"></script>
+    <script src="../../scripts/angular/angular-local-storage.min.js"></script>
+    <script src="../../scripts/moment/angular-moment.min.js"></script>
+
+    <script src="../../src/app/shortener-app.js"></script>
+    <script src="../../src/app/shortener-app-route.js"></script>
+
+    <script src="../../src/app/common/shortener.util.js"></script>
+
+    <script src="../../src/app/modules/shortener/shortener.module.js"></script>
+    <script src="../../src/app/services/shortenerService.js"></script>
+    <script src="../../src/app/modules/shortener/shortener.controller.js"></script>
+    <script src="../../src/app/modules/shortener/shortenerArchive.controller.js"></script>
+</body>
+</html>
